@@ -1,0 +1,1 @@
+Tasarım yaptığımız dosyayı kod dosyasına eklemek için "Gradle Scripts" altında "build.grandle(module)" içine giriyoruz.Girdiğimiz kod dosyasın da "plugins" sınıfının içine "id 'kotlin-android-extensions'" ekliyoruz.
