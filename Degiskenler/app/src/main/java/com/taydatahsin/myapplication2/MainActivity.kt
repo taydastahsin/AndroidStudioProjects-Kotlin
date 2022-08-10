@@ -88,5 +88,22 @@ class MainActivity : AppCompatActivity() {
         listeExample1.set(1,5)//listedeki 1.indeksi değiştirir.
         println(listeExample1.get(1))//listedeki 1.indeksi getirir.
 
+        // Set (içersindeki elemanlardan sadece 1 adet bulunur)
+        val setExample= setOf<Int>(6,6,10,12,13,15,13)
+        for (i in setExample) {//for döngüsü bütün elemanları yazar
+            println(i)
+        }
+
+        //hashmap (hashmap of)
+        val hashExample = HashMap<Int,String>()// anahtar bir değer seçerek karşılığına gelen değeri gösterir.
+        hashExample.put(1,"Tahsin")
+        hashExample.put(2 ,"Batuhan")
+        hashExample.put(3,"Doğukan")
+
+        println(hashExample.get(1))
+
+        val hashExample1= hashMapOf<Int,String>(1 to "Burak",2 to "Hakkı")//hash 'in farklı türde yazımı
+
+
     }
 }
