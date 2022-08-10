@@ -5,3 +5,4 @@ Tasarım yaptığımız dosyayı kod dosyasına eklemek için "Gradle Scripts" a
 "val" ifadesiyle sabit değişken değri veriyoruz.(içerisindeki değeri değişmeyen)(val y =10)
 
 "val myInteger : Int" ile değişkeni tanımlıyoruz(hangi türde olmasını istiyorsak belirtiyoruz.)
+

@@ -55,7 +55,38 @@ class MainActivity : AppCompatActivity() {
         // && -> ve
         // || -> veya
 
+        // Veri Dönüştürme
 
+        val dataChange = "50" //Girilen string değeri
+
+        val showData=dataChange.toInt() // değeri int değere çevirme
+       // println(showData) // değişen değişkeni gösterme
+
+
+        //Diziler(array of )
+
+        val diziNo=5
+        val diziExample= arrayOf(diziNo,"Ali","veli","deli")//dizi tanımlıyoruz ve eleman ekliyoruz.
+        println(diziExample.get(0)) //dizinin 0. indeksini getirir.
+        //println(diziExample[0]) // dizinin 0. indeksini getirir.
+        diziExample.set(1,"Tahsin")//dizinin 1. indeksini değiştiriyoruz.
+        println(diziExample.get(1))
+
+        val doubleDizi = doubleArrayOf(2.5,3.0,4.5)//diziyi double değerlerle eleman ekledik.(Tam sayı kabul etmez)
+        println(doubleDizi.get(2))
+
+        val karisikDizi = arrayOf("Tahsin",23,true,23,5)
+        println(karisikDizi.get(0))
+
+        //Listeler(arraylist of)
+
+        val listeExample= arrayListOf("merhaba","hoş geldiniz") //liste oluşturuyoruz.String türünde eleman ekliyoruz
+        val listeExample1= arrayListOf<Any>("Tahsin",3,true,3.5)// listeyi "<>"işaretleri içeresinde bulunan değişken türüne göre tanımlıyoruz
+        //listedeki "any" değişkeni herşey anlamına geliyor.bütün değişken türdeki elemanları içine alır.
+
+        println(listeExample.get(1))//listedeki 1. indeksi getirir
+        listeExample1.set(1,5)//listedeki 1.indeksi değiştirir.
+        println(listeExample1.get(1))//listedeki 1.indeksi getirir.
 
     }
 }
