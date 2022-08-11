@@ -6,3 +6,4 @@ Tasarım yaptığımız dosyayı kod dosyasına eklemek için "Gradle Scripts" a
 
 "val myInteger : Int" ile değişkeni tanımlıyoruz(hangi türde olmasını istiyorsak belirtiyoruz.)
 
+Range(ARalık belirtme)"0..9" şeklinde olur.

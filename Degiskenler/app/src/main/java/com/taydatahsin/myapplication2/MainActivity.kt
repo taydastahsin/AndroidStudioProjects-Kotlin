@@ -104,6 +104,67 @@ class MainActivity : AppCompatActivity() {
 
         val hashExample1= hashMapOf<Int,String>(1 to "Burak",2 to "Hakkı")//hash 'in farklı türde yazımı
 
+        //Matematiksel Operatörler
+
+        val sayi1=6
+        val sayi2=6
+
+        println(sayi1+sayi2)//Toplama operatörü
+        println(sayi1-sayi2)//Çıkarma operatörü
+        println(sayi1*sayi2)//Çarpma operatörü
+        println(sayi1/sayi2)//Bölme operatörü
+        println(sayi1%sayi2)//Kalan operatörü
+
+
+        // if-elseif-else (Eğer koşulu)
+
+        val notNo=60
+
+        if (notNo<50){
+            println("Kaldınız")
+        }
+        else if (notNo>=50 ){
+            println("Geçtiniz")
+        }
+        else{
+            println("Geçtiniz")
+        }
+
+        //when (Swich-case gibi koşulun fazla olduğu yerde kullanılır)
+
+        val dereceNo =3
+
+        when(dereceNo){
+            0-> println("çok kötü")
+            1-> println("kötü")
+            2-> println("orta")
+            3-> println("iyi")
+            4-> println("çok iyi")
+        }
+
+        //Döngüler
+
+        //For Döngüsü
+        val forDizi= arrayListOf<Any>(5,"tahsin",true)
+
+        for (per in forDizi){//diziyi "per" değişkenine atadık
+            println(per)//"per değişkenini yazdırdık
+        }
+
+        for (sayi in 0..3){//0-3 e kadar sayıları yazdırdık
+            println(sayi)
+        }
+
+        //While Döngüsü
+        var whileDeger =0
+        while (whileDeger<10){//döngüde koşul belirttik
+            println(whileDeger)//döngü elemanlarını yazdık
+            whileDeger+=1//döngü değerini sonsuz olmasın diye artırdık.
+        }
+
+
+
+
 
     }
 }
