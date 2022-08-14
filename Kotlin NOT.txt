@@ -7,3 +7,6 @@ Tasarım yaptığımız dosyayı kod dosyasına eklemek için "Gradle Scripts" a
 "val myInteger : Int" ile değişkeni tanımlıyoruz(hangi türde olmasını istiyorsak belirtiyoruz.)
 
 Range(ARalık belirtme)"0..9" şeklinde olur.
+
+Yaptığımız uygulamanın yatay ekranda stabiletesini koruyabilmesi için soldaki projectin içindeki manifests dosyasını açıyoruz.İçeresinde ki AndroidManifest.xml açıyoruz kodun içindeki "activity" kısmına bu 
+" android:screenOrientation="sensor" " yazılmalıdır.
