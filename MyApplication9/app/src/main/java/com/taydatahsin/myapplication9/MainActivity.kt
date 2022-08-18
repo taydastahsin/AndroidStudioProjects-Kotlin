@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var heroList =ArrayList<String>()
+        var heroList =ArrayList<String>()//Kaharaman isimlerini diziye ekledim
         heroList.add("Batman")
         heroList.add("Süperman")
         heroList.add("Ironman")
@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         heroList.add("Spiderman")
 
         //Verimsiz Bitmap yöntemi
+        // Super kahramanların resimlerini "Bitmap" türünde ekrana koymak için uzun yoldan tek tek tanımladım
 /*
         val batmanBitmap =BitmapFactory.decodeResource(applicationContext.resources,R.drawable.batman)
         val supermanBitmap=BitmapFactory.decodeResource(applicationContext.resources,R.drawable.superman)
@@ -29,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         val aquamanBitmap=BitmapFactory.decodeResource(applicationContext.resources,R.drawable.aquaman)
         val spidermanBitmap =BitmapFactory.decodeResource(applicationContext.resources,R.drawable.spiderman)
 
-        var heroImageList =ArrayList<Bitmap>()
+        var heroImageList =ArrayList<Bitmap>()//resimleri diziye "Bitmap" türünde ekledim
         heroImageList.add(batmanBitmap)
         heroImageList.add(supermanBitmap)
         heroImageList.add(ironmanBitmap)
@@ -37,6 +38,7 @@ class MainActivity : AppCompatActivity() {
         heroImageList.add(spidermanBitmap)
 */
         //Verimli Bitmap yöntemi
+        //Resimleri int değerinde tanımladım
 
         val batmanDrawbleid=R.drawable.batman
         val supermanDrawbleid=R.drawable.superman
@@ -44,7 +46,7 @@ class MainActivity : AppCompatActivity() {
         val aquamanDrawbleid=R.drawable.aquaman
         val spidermanDrawbleid=R.drawable.spiderman
 
-        var superKahramanListesi=ArrayList<Int>()
+        var superKahramanListesi=ArrayList<Int>()//Resimleri int değerinde kaydedip ona göre kaydettim
         superKahramanListesi.add(batmanDrawbleid)
         superKahramanListesi.add(supermanDrawbleid)
         superKahramanListesi.add(ironmanDrawbleid)
@@ -54,12 +56,12 @@ class MainActivity : AppCompatActivity() {
 
 
         //Adapter
-
+        //recycler  kısmı
         var layoutManager=LinearLayoutManager(this)
         recyclerView4.layoutManager=layoutManager
 
-
-        val adapter =recycllerClass(heroList,superKahramanListesi)
+        //adapter kısmı
+        val adapter =recycllerClass(heroList,superKahramanListesi)//sınıfdan gelen kahraman ismi ve görselleri alıyor
         recyclerView4.adapter=adapter
 
 
