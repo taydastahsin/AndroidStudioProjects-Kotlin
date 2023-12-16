@@ -12,7 +12,9 @@
         tools:layout="@layout/fragment_anasayfa" >
         <action
             android:id="@+id/detay_gecis"
-            app:destination="@id/detayFragment" />
+            app:destination="@id/detayFragment"
+            app:popUpTo="@id/anasayfaFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/detayFragment"
@@ -39,4 +41,9 @@
             android:name="urun"
             app:argType="taydastahsin.com.navigationcompent.Urun" />
     </fragment>
+    <fragment
+        android:id="@+id/ayarlarFragment"
+        android:name="taydastahsin.com.navigationcompent.AyarlarFragment"
+        android:label="fragment_ayarlar"
+        tools:layout="@layout/fragment_ayarlar" />
 </navigation>

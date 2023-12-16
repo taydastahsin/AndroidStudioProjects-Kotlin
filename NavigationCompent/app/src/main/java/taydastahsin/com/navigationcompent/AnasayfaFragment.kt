@@ -1,6 +1,7 @@
 package taydastahsin.com.navigationcompent
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -33,6 +34,22 @@ class AnasayfaFragment : Fragment() {
 
 
         return binding.root
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        Log.e("Yaşam Döngüsü","onCreate")
+
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.e("Yaşam Döngüsü","onPause")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.e("Yaşam Döngüsü","onResume")
     }
 
 
