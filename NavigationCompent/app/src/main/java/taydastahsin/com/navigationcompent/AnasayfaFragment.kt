@@ -18,7 +18,7 @@ class AnasayfaFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = FragmentAnasayfaBinding.inflate(inflater, container, false)
 
-        binding.button.setOnClickListener{
+        /*binding.button.setOnClickListener{
             //Snackbar.make(it,"Nasılsınız",Snackbar.LENGTH_SHORT).show()
 
             //binding.textView.text="Değişti"
@@ -30,6 +30,11 @@ class AnasayfaFragment : Fragment() {
 
             Navigation.findNavController(it).navigate(gecis)
 
+        }*/
+
+        binding.button.setOnClickListener{
+
+            Navigation.findNavController(it).navigate(R.id.bottom_view_gecis)
         }
 
 

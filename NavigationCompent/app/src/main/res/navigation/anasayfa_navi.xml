@@ -15,6 +15,9 @@
             app:destination="@id/detayFragment"
             app:popUpTo="@id/anasayfaFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/bottom_view_gecis"
+            app:destination="@id/bottomViewFragment" />
     </fragment>
     <fragment
         android:id="@+id/detayFragment"
@@ -46,4 +49,9 @@
         android:name="taydastahsin.com.navigationcompent.AyarlarFragment"
         android:label="fragment_ayarlar"
         tools:layout="@layout/fragment_ayarlar" />
+    <dialog
+        android:id="@+id/bottomViewFragment"
+        android:name="taydastahsin.com.navigationcompent.BottomViewFragment"
+        android:label="fragment_bottom_view"
+        tools:layout="@layout/fragment_bottom_view" />
 </navigation>
