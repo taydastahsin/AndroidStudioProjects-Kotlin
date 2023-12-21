@@ -8,7 +8,13 @@ import android.view.View
 import android.widget.Button
 import android.widget.SeekBar
 import android.widget.SeekBar.OnSeekBarChangeListener
+import com.google.android.material.datepicker.MaterialDatePicker
+import com.google.android.material.timepicker.MaterialTimePicker
+import com.google.android.material.timepicker.TimeFormat
 import taydastahsin.com.widgetskullanimi.databinding.ActivityMainBinding
+import java.text.Format
+import java.text.SimpleDateFormat
+import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -75,6 +81,35 @@ class MainActivity : AppCompatActivity() {
 
             override fun onStopTrackingTouch(seekBar: SeekBar?) {}
         })
+
+
+        binding.buttonSaat.setOnClickListener {
+            val tp =MaterialTimePicker.Builder() // Zaman kütüphanesini çağırıyoruz
+                .setTitleText("Saat Seçiniz")//Saatin üstünde başlık
+                .setTimeFormat(TimeFormat.CLOCK_24H) //Saat dilimlerini ayarladık
+                .build()//Saati oluşturduk.
+
+            tp.show(supportFragmentManager,"Saat")//Saatin ekranda gözükmesine yarıyor.
+
+            tp.addOnPositiveButtonClickListener {//Ekranda açılan saatin tıklanıldığında yani ayarlandıuğında ne yapmasını ayarladık.
+                binding.editTextSaat.setText("Saat ${tp.hour} : ${tp.minute}")//Ayarlanan saati EditText e aktararak ekranda gösterdik.
+            }
+        }
+
+        binding.buttonTarih.setOnClickListener {
+            val dp = MaterialDatePicker.Builder.datePicker()//Tarih kütüphanesini oluşturuyoruz
+                .setTitleText("Tarih belirleyiniz")//Tarih için açılan takvimde başlık
+                .build()//Takvimi oluşturduk.
+
+            dp.show(supportFragmentManager,"Tarih")//Takvim ekranda gösterdi.
+
+            dp.addOnPositiveButtonClickListener {//Ekranda gösterilen takvimde seçilen zamanı EditText e aktarmak için kullandık.
+                val df = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())//Takvimin aktarırken hangi formatta aktaracağımızı belirledik.
+                val tarih =df.format(it)//Formatını belirlediğimiz tarihi nerden alacağımızı yani oluşturduğumuz kütüphaneden aldığımız takvimden aldık.
+
+                binding.editTextTarih.setText(tarih)//EditText'e "tarih" adlı neseneye tanımladığımız tavim zamanını yazdırdık.
+            }
+        }
 
         binding.buttonGoster.setOnClickListener {
 
