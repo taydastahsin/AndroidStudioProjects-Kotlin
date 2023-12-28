@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SearchView
 import android.widget.SearchView.OnQueryTextListener
 import android.widget.Toast
 import androidx.navigation.Navigation
@@ -28,17 +29,19 @@ class AnasayfaFragment : Fragment() {
 
 
 
-        binding.searchView.setOnSearchClickListener { object :OnQueryTextListener{
+        binding.searchView.setOnQueryTextListener(object : OnQueryTextListener,
+            androidx.appcompat.widget.SearchView.OnQueryTextListener {
             override fun onQueryTextChange(newText: String): Boolean {
                 ara(newText)
-                return  true
+              return true
             }
 
             override fun onQueryTextSubmit(query: String): Boolean {
                 ara(query)
-               return  true
+                return true
             }
-        } }
+
+        })
 
 
         return binding.root
