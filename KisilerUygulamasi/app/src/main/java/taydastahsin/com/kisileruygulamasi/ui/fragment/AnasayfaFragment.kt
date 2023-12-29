@@ -10,10 +10,12 @@ import android.widget.SearchView
 import android.widget.SearchView.OnQueryTextListener
 import android.widget.Toast
 import androidx.navigation.Navigation
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
 import taydastahsin.com.kisileruygulamasi.R
 import taydastahsin.com.kisileruygulamasi.data.entity.Kisiler
 import taydastahsin.com.kisileruygulamasi.databinding.FragmentAnasayfaBinding
+import taydastahsin.com.kisileruygulamasi.ui.adapter.KisilerAdapter
 
 
 class AnasayfaFragment : Fragment() {
@@ -21,6 +23,22 @@ class AnasayfaFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding =FragmentAnasayfaBinding.inflate(inflater, container, false)
+
+        binding.rv.layoutManager = LinearLayoutManager(requireContext())
+
+        val veriList = ArrayList<Kisiler>()
+
+        var k1 =Kisiler(1,"Tahsin","05392546511")
+        var k2 =Kisiler(2,"Gözde","Kalbimin numarası")
+        var k3 =Kisiler(3,"Sevgi","İsteyen herkes ulaşabilir")
+
+        veriList.add(k1)
+        veriList.add(k2)
+        veriList.add(k3)
+
+        val kisilerAdapter = KisilerAdapter(requireContext(),veriList)
+        binding.rv.adapter = kisilerAdapter
+
 
 
         binding.fab.setOnClickListener {
