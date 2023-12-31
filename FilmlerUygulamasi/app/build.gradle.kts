@@ -1,13 +1,14 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("androidx.navigation.safeargs.kotlin") //veri geçişinde kullandığımız "plugins"
 }
 
 android {
     namespace = "taydastahsin.com.filmleruygulamasi"
     compileSdk = 34
 
-    buildFeatures{
+    buildFeatures{//ekranda kullandığımız araçlara erişim için kurduğumuz yöntem
         viewBinding =true
     }
 

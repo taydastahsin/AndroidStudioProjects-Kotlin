@@ -18,5 +18,8 @@
         android:id="@+id/detayFragment"
         android:name="taydastahsin.com.filmleruygulamasi.ui.fragment.DetayFragment"
         android:label="fragment_detay"
-        tools:layout="@layout/fragment_detay" />
+        tools:layout="@layout/fragment_detay" >
+        <argument android:name="film"
+            app:argType="taydastahsin.com.filmleruygulamasi.data.entity.Filmler" />
+    </fragment>
 </navigation>
