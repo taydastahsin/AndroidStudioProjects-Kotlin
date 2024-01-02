@@ -38,10 +38,10 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvMarka"
-        android:layout_width="405dp"
-        android:layout_height="49dp"
+        android:layout_width="406dp"
+        android:layout_height="66dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toTopOf="@+id/rvKategori"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

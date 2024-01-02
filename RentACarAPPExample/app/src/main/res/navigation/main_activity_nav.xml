@@ -18,5 +18,9 @@
         android:id="@+id/detayFragment"
         android:name="taydastahsin.com.rentacarappexample.ui.fragment.DetayFragment"
         android:label="fragment_detay"
-        tools:layout="@layout/fragment_detay" />
+        tools:layout="@layout/fragment_detay" >
+        <argument
+            android:name="arabalar"
+            app:argType="taydastahsin.com.rentacarappexample.data.Arabalar" />
+    </fragment>
 </navigation>

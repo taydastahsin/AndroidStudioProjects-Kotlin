@@ -1,4 +1,6 @@
 package taydastahsin.com.rentacarappexample.data
 
-class Göstergeler {
+import java.io.Serializable
+
+data class Göstergeler(var car_gid:Int,var car_bilgi:String,var car_photo:String):Serializable {
 }
