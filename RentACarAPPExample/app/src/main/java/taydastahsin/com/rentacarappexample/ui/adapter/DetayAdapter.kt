@@ -25,6 +25,7 @@ class DetayAdapter(var mcontext: Context, var gostergeListesi:List<Göstergeler>
 
         t.imageView4.setImageResource(mcontext.resources.getIdentifier(gostergelist.car_photo,"drawable",mcontext.packageName))
         t.textView2.text="${gostergelist.car_bilgi}"
+
     }
 
     override fun getItemCount(): Int {
