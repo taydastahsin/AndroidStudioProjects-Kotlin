@@ -4,6 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <variable
+            name="mainActivityNesnesi"
+            type="taydastahsin.com.mvvmkullanimi.MainActivity" />
+        <variable
+            name="textSonuc"
+            type="String" />
+        <import type="android.view.View"/>
 
     </data>
 
@@ -17,8 +24,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="39dp"
-            android:text="0"
-            android:textSize="34sp"
+            android:text="@{textSonuc}"
+            android:textColor="@{Integer.parseInt(textSonuc) >10 ? @color/red:@color/blue }"
+            android:visibility="@{Integer.parseInt(textSonuc) ==0 ? View.INVISIBLE:View.VISIBLE}"
+            android:textSize="@{textSonuc.length()>1 ? @dimen/boyut1:@dimen/boyut2}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -56,6 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
             android:text="Toplama"
+            android:onClick="@{() ->mainActivityNesnesi.buttonToplamaTikla(editTextSayi1.getText().toString(),editTextSayi2.getText().toString())}"
             app:layout_constraintEnd_toStartOf="@+id/buttonCarpma"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -66,6 +76,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Çarpma"
+            android:onClick="@{() -> mainActivityNesnesi.buttonCarpmaTikla(editTextSayi1.getText().toString(),editTextSayi2.getText().toString())}"
             app:layout_constraintBaseline_toBaselineOf="@+id/buttonToplama"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"

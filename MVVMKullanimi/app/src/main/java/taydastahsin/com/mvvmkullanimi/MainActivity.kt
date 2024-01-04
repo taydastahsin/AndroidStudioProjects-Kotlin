@@ -12,31 +12,25 @@ class MainActivity : AppCompatActivity() {
         binding =ActivityMainBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
 
-        binding.buttonToplama.setOnClickListener {
-            val sayi1Deger =binding.editTextSayi1.text.toString()
-            val sayi2Deger =binding.editTextSayi2.text.toString()
+        binding.textSonuc="0"
+        binding.mainActivityNesnesi=this
+    }
 
-            val sayi1=sayi1Deger.toInt()
-            val sayi2 =sayi2Deger.toInt()
+    fun buttonToplamaTikla( sayi1Deger:String,sayi2Deger:String ){
+        val sayi1=sayi1Deger.toInt()
+        val sayi2 =sayi2Deger.toInt()
 
-            val toplama=sayi1+sayi2
+        val toplama=sayi1+sayi2
 
-            binding.textViewSonuc.setText(toplama.toString())
-        }
+        binding.textSonuc=toplama.toString()
+    }
 
-        binding.buttonCarpma.setOnClickListener {
-            val sayi1Deger =binding.editTextSayi1.text.toString()
-            val sayi2Deger =binding.editTextSayi2.text.toString()
+    fun buttonCarpmaTikla(sayi1Deger:String,sayi2Deger:String){
+        val sayi1=sayi1Deger.toInt()
+        val sayi2 =sayi2Deger.toInt()
 
-            val sayi1=sayi1Deger.toInt()
-            val sayi2 =sayi2Deger.toInt()
+        val carpma=sayi1*sayi2
 
-            val carpma=sayi1*sayi2
-
-            binding.textViewSonuc.setText(carpma.toString())
-
-        }
-
-
+        binding.textSonuc =carpma.toString()
     }
 }
