@@ -7,12 +7,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.viewModels
 import taydastahsin.com.kisileruygulamasi.R
 import taydastahsin.com.kisileruygulamasi.databinding.FragmentKisiKayitBinding
+import taydastahsin.com.kisileruygulamasi.ui.viewmodel.KisiKayitViewModel
 
 
 class KisiKayitFragment : Fragment() {
     private  lateinit var binding: FragmentKisiKayitBinding
+    private lateinit var viewModel: KisiKayitViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_kisi_kayit,container, false)
@@ -23,8 +26,14 @@ class KisiKayitFragment : Fragment() {
         return binding.root
     }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        val tempViewModel:KisiKayitViewModel by viewModels()
+        viewModel =tempViewModel
+    }
+
     fun buttonkaydet(kisiAd : String,kisiTel :String){
-        Log.e("Kişiler Kaydet","$kisiAd - $kisiTel")
+        viewModel.buttonkaydet(kisiAd,kisiTel)
 
     }
 
