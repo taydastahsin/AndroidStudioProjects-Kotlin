@@ -36,4 +36,13 @@ class KisiDataSource {
         return@withContext veriList
 
     }
+    suspend fun ara(girilenbilgi : String):List<Kisiler> = withContext(Dispatchers.IO) {
+        val veriList = ArrayList<Kisiler>()
+
+        var k1 = Kisiler(1,"Tahsin","05392546511")
+        veriList.add(k1)
+
+        return@withContext veriList
+
+    }
 }

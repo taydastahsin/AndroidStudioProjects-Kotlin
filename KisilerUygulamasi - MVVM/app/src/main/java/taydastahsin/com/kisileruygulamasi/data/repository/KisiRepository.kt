@@ -13,4 +13,6 @@ class KisiRepository {
     suspend fun sil(kisi_id:Int)=kds.sil(kisi_id)
 
     suspend fun data():List<Kisiler> =kds.data()
+
+    suspend fun ara(girilenbilgi : String):List<Kisiler> =kds.ara(girilenbilgi)
 }

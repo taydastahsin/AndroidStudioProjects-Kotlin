@@ -40,12 +40,12 @@ class AnasayfaFragment : Fragment() {
         binding.searchView.setOnQueryTextListener(object : OnQueryTextListener,
             androidx.appcompat.widget.SearchView.OnQueryTextListener {
             override fun onQueryTextChange(newText: String): Boolean {
-                ara(newText)
+                viewModel.ara(newText)
               return true
             }
 
             override fun onQueryTextSubmit(query: String): Boolean {
-                ara(query)
+                viewModel.ara(query)
                 return true
             }
 
@@ -56,15 +56,17 @@ class AnasayfaFragment : Fragment() {
 
     }
 
+    override fun onResume() {
+        super.onResume()
+        viewModel.data()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val tempRepository:AnasayfaViewModel by viewModels()
         viewModel=tempRepository
     }
 
-    fun ara(girilenbilgi : String){
-        Log.e("Kişi arama",girilenbilgi)
-    }
 
     fun fab(it:View){
         Navigation.findNavController(it).navigate(R.id.anasayfa_kayit_gecis)

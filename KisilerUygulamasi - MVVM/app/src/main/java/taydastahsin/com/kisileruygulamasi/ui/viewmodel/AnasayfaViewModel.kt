@@ -17,6 +17,7 @@ class AnasayfaViewModel:ViewModel() {
     fun sil(kisi_id:Int){
         CoroutineScope(Dispatchers.Main).launch {
             krepo.sil(kisi_id)
+            krepo.data()
         }
 
     }
@@ -28,6 +29,12 @@ class AnasayfaViewModel:ViewModel() {
     fun data(){
         CoroutineScope(Dispatchers.Main).launch {
             kisilerListesi.value =krepo.data()
+        }
+    }
+
+    fun ara(girilenbilgi : String){
+        CoroutineScope(Dispatchers.Main).launch {
+           kisilerListesi.value= krepo.ara(girilenbilgi)
         }
     }
 }
