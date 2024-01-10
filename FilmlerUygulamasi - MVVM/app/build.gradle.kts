@@ -10,6 +10,7 @@ android {
 
     buildFeatures{//ekranda kullandığımız araçlara erişim için kurduğumuz yöntem
         viewBinding =true
+        dataBinding =true
     }
 
     defaultConfig {

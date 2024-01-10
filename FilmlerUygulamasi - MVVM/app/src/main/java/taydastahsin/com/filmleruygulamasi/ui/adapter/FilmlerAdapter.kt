@@ -3,9 +3,11 @@ package taydastahsin.com.filmleruygulamasi.ui.adapter
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
+import taydastahsin.com.filmleruygulamasi.R
 import taydastahsin.com.filmleruygulamasi.data.entity.Filmler
 import taydastahsin.com.filmleruygulamasi.databinding.CardTasarimBinding
 import taydastahsin.com.filmleruygulamasi.databinding.FragmentAnasayfaBinding
@@ -23,7 +25,7 @@ class FilmlerAdapter(var mcontext :Context,var filmListesi:List<Filmler>):Recycl
 
     //Tasarımızın içindeki araçalra erişmemiz için "binding" yapısını oluşturduğumuz yapı
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): cardTasarim {
-       val  binding = CardTasarimBinding.inflate(LayoutInflater.from(mcontext), parent, false)
+       val  binding:CardTasarimBinding = DataBindingUtil.inflate(LayoutInflater.from(mcontext),R.layout.card_tasarim, parent, false)
         return cardTasarim(binding)
     }
 
@@ -35,7 +37,7 @@ class FilmlerAdapter(var mcontext :Context,var filmListesi:List<Filmler>):Recycl
 
         //resim için kullandığımız araca resmin yolunu gösteriyoruz.
         t.imageViewResim.setImageResource(mcontext.resources.getIdentifier(filmV.film_resim,"drawable",mcontext.packageName))
-        t.textViewFiyat.text="${filmV.film_fiyat} TL" //Tasarımımız içindeki fiyat text'ine "filmV" den fiyat bilgisini aldık.
+        t.filmNesnesi=filmV
 
         t.imageViewResim.setOnClickListener{//Tasarımızdaki resme tıklandığında ne yapılcağını belirlemek için kulllanılır.
 
