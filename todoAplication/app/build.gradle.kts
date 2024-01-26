@@ -9,6 +9,10 @@ android {
     namespace = "taydastahsin.com.todoaplication"
     compileSdk = 34
 
+    buildFeatures{
+        viewBinding =true
+    }
+
     defaultConfig {
         applicationId = "taydastahsin.com.todoaplication"
         minSdk = 24
@@ -57,6 +61,11 @@ dependencies {
 
     testImplementation ("com.google.dagger:hilt-android-testing:2.50")
     kaptTest ("com.google.dagger:hilt-compiler:2.50")
+
+    implementation ("androidx.room:room-runtime:2.5.0-beta02")
+    kapt("androidx.room:room-compiler:2.5.0-beta02")
+    implementation("androidx.room:room-ktx:2.4.3")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
 }
 kapt {
     correctErrorTypes = true
