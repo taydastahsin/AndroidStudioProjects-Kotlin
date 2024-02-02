@@ -12,6 +12,4 @@ import javax.inject.Singleton
 @HiltViewModel
 class AnasayfaViewModel @Inject constructor() :ViewModel() {
 
-
-
 }
