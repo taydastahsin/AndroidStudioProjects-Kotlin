@@ -1,9 +1,16 @@
 package taydastahsin.com.todoaplication.di
 
+import android.content.Context
+import androidx.room.Room
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import taydastahsin.com.todoaplication.data.datasource.todoDataSource
+import taydastahsin.com.todoaplication.data.repo.todoRepository
+import taydastahsin.com.todoaplication.room.Veritabanı
+import taydastahsin.com.todoaplication.room.todoDao
 import javax.inject.Singleton
 
 @Module
@@ -12,27 +19,22 @@ class AppModule {
 
     @Provides
     @Singleton
-    suspend fun kaydet():String{
-        return ""
+    fun provideTodoDataSource(tdao:todoDao):todoDataSource{
+        return todoDataSource(tdao)
     }
 
     @Provides
     @Singleton
-    suspend fun sil():String{
-        return ""
+    fun provideTodoRepository(tds:todoDataSource):todoRepository{
+        return todoRepository(tds)
     }
 
     @Provides
     @Singleton
-    suspend fun guncelle():String{
-        return ""
+    fun provideTodoDao(@ApplicationContext context:Context):todoDao{
+        val vt =Room.databaseBuilder(context,Veritabanı::class.java,"todo.db")
+            .createFromAsset("todo.db").build()
+        return vt.gettodoDao()
     }
-
-    @Provides
-    @Singleton
-    suspend fun ara():String{
-        return ""
-    }
-
 
 }
