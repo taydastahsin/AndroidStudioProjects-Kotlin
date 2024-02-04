@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/detayFragment"
-        android:name="taydastahsin.com.todoaplication.ui.fragment.detayFragment"
+        android:name="taydastahsin.com.todoaplication.ui.fragment.DetayFragment"
         android:label="fragment_detay"
         tools:layout="@layout/fragment_detay" />
 </navigation>
