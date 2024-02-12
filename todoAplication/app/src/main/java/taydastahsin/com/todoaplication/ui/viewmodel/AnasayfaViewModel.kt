@@ -16,7 +16,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 @HiltViewModel
-class AnasayfaViewModel @Inject constructor(var trepo:todoRepository) :ViewModel() {
+class AnasayfaViewModel @Inject constructor(var trepo:todoRepository) {
 var todoListesi =MutableLiveData<List<todoData>>()
 
     init {

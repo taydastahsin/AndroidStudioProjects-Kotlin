@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+    android:id="@+id/List"
+    android:title="Liste"
+    android:icon="@drawable/list"
+    app:showAsAction="ifRoom"></item>
+
+    <item
+        android:id="@+id/Favorite"
+        android:title="Favori"
+        android:icon="@drawable/favori"
+        app:showAsAction="ifRoom"></item>
+
+    <item
+        android:id="@+id/Setting"
+        android:title="Settings"
+        android:icon="@drawable/setting"
+        app:showAsAction="ifRoom"></item>
+
+
+</menu>
