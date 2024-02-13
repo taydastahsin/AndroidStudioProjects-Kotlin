@@ -2,6 +2,7 @@ package taydastahsin.com.hiltkullanimi
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.hiltkullanimi.R
 import dagger.hilt.EntryPoint
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
