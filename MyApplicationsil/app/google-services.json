@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "279864969638",
+    "project_id": "kotlinegitim-5f522",
+    "storage_bucket": "kotlinegitim-5f522.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:279864969638:android:ea197ff2d52850fae52767",
+        "android_client_info": {
+          "package_name": "com.example.kisileruygulamasi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDu-lX3r1mIFUF8-0KjCk6jN_LbNRb-czQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
