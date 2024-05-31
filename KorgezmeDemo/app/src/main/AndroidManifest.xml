@@ -12,9 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KorgezmeDemo"
         tools:targetApi="31">
+        <meta-data android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDjRX_8kQGVIHVpmi0SyL-yNTLCnoAvgl0"/>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.KorgezmeDemo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
